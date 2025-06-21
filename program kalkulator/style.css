@@ -1,0 +1,130 @@
+:root {
+    --bg: #1e272e;
+    --btn: #2c3e50;
+    --btn-hover: #34495e;
+    --text: white;
+  }
+  
+  body.light {
+    --bg: #f2f2f2;
+    --btn: #e0e0e0;
+    --btn-hover: #cccccc;
+    --text: #2c3e50;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', sans-serif;
+    transition: background 0.4s, color 0.4s;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1, h2 {
+    margin-bottom: 10px;
+  }
+  
+  .theme-btn, .start-btn {
+    margin: 15px 0;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 10px;
+    background: var(--btn);
+    color: var(--text);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .calculator {
+    background-color: var(--btn);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 260px;
+  }
+  
+  #display {
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    text-align: right;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  button {
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--btn);
+    color: var(--text);
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background-color: var(--btn-hover);
+  }
+  
+  .history {
+    width: 220px;
+    background: var(--btn);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+    height: fit-content;
+  }
+  
+  .history h2 {
+    margin-top: 0;
+    font-size: 18px;
+  }
+  
+  .history ul {
+    list-style: none;
+    padding-left: 10px;
+  }
+  
+  .main-layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .page {
+    display: none;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .page:not(.hidden) {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+  
